@@ -2,8 +2,6 @@ let AWS = require('aws-sdk');
 let connectionManager = require('./ConnectionManager');
 let SL_AWS = require('slappforge-sdk-aws');
 const rds = new SL_AWS.RDS(connectionManager);
-const sns = new AWS.SNS();
-const ddb = new AWS.DynamoDB.DocumentClient();
 const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 exports.handler = function (event, context, callback) {
 	cognito_idp.listUsers({
