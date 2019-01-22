@@ -55,6 +55,7 @@ exports.handler = function (event, context, callback) {
 		instanceIdentifier: 'KTestCognitor'
 	}, function (error, connection) {
 		if (error) { throw err; }
+		connection.end();
 	});
 
 	callback(null, 'Successfully executed');
